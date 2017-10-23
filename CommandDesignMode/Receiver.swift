@@ -11,19 +11,30 @@ import UIKit
 class Receiver: NSObject {
     
     // 被服务的 对象
-    weak var clientView:UIView?
+    weak var clientView:UIView?{
+        
+        // clientView 决定Hud  staturation  因为 我们需要 从初始值 变暗 或者 变亮等的
+        didSet{
+            
+            let color:UIColor = clientView!.backgroundColor!
+            color.getHue(&hud, saturation: &staturation, brightness: &brightness, alpha: &alpha)
+            
+        }
+    }
     
     //
-    var hud:CGFloat?
-    var staturation:CGFloat?
-    var brightness:CGFloat?
-    var alpha:CGFloat?
+    var hud:CGFloat = 0.0
+    var staturation:CGFloat = 0.0  // 饱和度
+    var brightness:CGFloat = 0.0
+    var alpha:CGFloat = 0.0
     
     /// 变暗
     ///
     /// - Parameter paramter: 操作系数
-    func  makeDark(paramter:CGFloat)
-    {
+    func  makeDark(paramter:CGFloat){
+        brightness -= paramter
+        brightness = max(brightness, 0)
+        clientView?.backgroundColor = UIColor(hue: hud, saturation: staturation, brightness: brightness, alpha: alpha)
         
     }
     
@@ -32,6 +43,8 @@ class Receiver: NSObject {
     ///
     /// - Parameter paramter: 操作系数
     func makeLighter(paramter:CGFloat) {
-        
+        brightness += paramter
+        brightness = min(1, brightness)
+        clientView?.backgroundColor =  UIColor(hue: hud, saturation: staturation, brightness: brightness, alpha: alpha)
     }
 }

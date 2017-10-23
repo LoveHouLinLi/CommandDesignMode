@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1356681F9D902300B7A0CD /* LighterCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1356671F9D902300B7A0CD /* LighterCommand.swift */; };
 		BF2F05331F9B348200C3FD1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F05321F9B348200C3FD1A /* AppDelegate.swift */; };
 		BF2F05351F9B348200C3FD1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2F05341F9B348200C3FD1A /* ViewController.swift */; };
 		BF2F05381F9B348200C3FD1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2F05361F9B348200C3FD1A /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1356671F9D902300B7A0CD /* LighterCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LighterCommand.swift; sourceTree = "<group>"; };
 		BF2F052F1F9B348200C3FD1A /* CommandDesignMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandDesignMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2F05321F9B348200C3FD1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2F05341F9B348200C3FD1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				BF2F05341F9B348200C3FD1A /* ViewController.swift */,
 				BF2F05441F9B372700C3FD1A /* Receiver.swift */,
 				BF2F05481F9B403500C3FD1A /* DarkerCommand.swift */,
+				BF1356671F9D902300B7A0CD /* LighterCommand.swift */,
 				BF2F05461F9B38BC00C3FD1A /* Invoker.swift */,
 				BF2F05361F9B348200C3FD1A /* Main.storyboard */,
 				BF2F05391F9B348200C3FD1A /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				BF2F05491F9B403500C3FD1A /* DarkerCommand.swift in Sources */,
 				BF2F05451F9B372700C3FD1A /* Receiver.swift in Sources */,
 				BF2F05351F9B348200C3FD1A /* ViewController.swift in Sources */,
+				BF1356681F9D902300B7A0CD /* LighterCommand.swift in Sources */,
 				BF2F05471F9B38BC00C3FD1A /* Invoker.swift in Sources */,
 				BF2F05331F9B348200C3FD1A /* AppDelegate.swift in Sources */,
 			);

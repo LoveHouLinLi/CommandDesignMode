@@ -10,9 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    //
+    @IBAction func addClick(_ sender: Any)
+    {
+        let lightCommand:LighterCommand = LighterCommand(receiver: receiver!, paramter: 0.1)
+        
+        Invoker.sharedInstance.addAndExecute(command: lightCommand as CommandProtocol)
+    }
+    
+    //
+    @IBAction func decClick(_ sender: Any)
+    {
+        let darkCommand:DarkerCommand = DarkerCommand(receiver: receiver!, paramter: 0.1)
+        
+        Invoker.sharedInstance.addAndExecute(command: darkCommand as CommandProtocol)
+
+    }
+    
+    //
+    @IBAction func rollBack(_ sender: Any)
+    {
+        Invoker.sharedInstance.rollBack()
+    }
+    
+    //
+    var receiver:Receiver?
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //
+        receiver = Receiver();
+        receiver?.clientView = self.view
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
